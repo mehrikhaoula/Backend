@@ -65,7 +65,7 @@ supprimtype:async(req,res)=>{
     try {
         let {type}=req.body
         let findtype=await categorie.deleteMany({type})
-        res.json({resultet:findtype,msg:"type deleted"})
+        res.json({resultet:findtype,msg:"type supprimer"})
     } catch (error) {
         return res.status(500).json({msg:error.message})
     }
