@@ -1,5 +1,6 @@
 let router=require('express').Router()
 let userCtrl=require('../controllers/userCtrl')
+let auth=require('../middleware/auth')
 //router.post('/user',userCtrl.add)
 //router.post('/division',userCtrl.Division)  // ki nesta3mlou 2 post lazem nbadlou /nom 
 //router.post('/multipl',userCtrl.Mul)

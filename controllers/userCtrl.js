@@ -67,10 +67,13 @@ inscrit:async(req,res)=>{
         //enregistre user dans BDD
         await newUser.save()
         res.json({
-            resultat:newUser
+            resultat:newUser,
+            msg:"user add",
+            success: true,
+            error: false,
         })
     } catch (error) {
-        return res.status(500).json({msg:error.message})
+            return res.status(500).json({msg:error.message, success:false, error: true});
     }
 },
 allUser:async(req,res)=>{
